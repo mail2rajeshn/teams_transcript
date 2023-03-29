@@ -1,7 +1,7 @@
 # Meeting_Summarizer
 
-- A tanscript summarizer package
-- streamlit demo app: https://miblue119-meeting-summarizer-streamlit-app-650rqa.streamlit.app/
+- Teams Meetings Summarize / Taskify App
+- streamlit demo app: https://mail2rajeshn-teams-transcript-streamlit-app-3vznkp.streamlit.app/
 
 ## Usage
 
