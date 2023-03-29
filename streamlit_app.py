@@ -13,7 +13,7 @@ from meeting_summarizer.utils import LANGUAGES, TO_LANGUAGE_CODE
 from meeting_summarizer.config import text_engine_choices
 
 
-st.title("Meeting Summarizer")
+st.title("Teams Meetings Summarize / Taskify")
 st.write("Summarize.vtt/.srts files from your meeting transcripts")
 transcript_name=st.file_uploader("Upload your .vtt or .srt files",type=['vtt','srt'])
 col1,col2=st.columns(2)
