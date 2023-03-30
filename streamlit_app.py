@@ -32,7 +32,7 @@ test=col2.checkbox("Test",value=True,help='Select this option to only summarize 
 make_button=st.button("Make Transcript Summary")
 
 st.session_state["summary"]=None
-# 如果tmp資料夾不存在，則建立
+
 path="tmp"
 if "summarize_sucess" not in st.session_state:
     st.session_state["summarize_sucess"] = False
@@ -91,7 +91,7 @@ if st.session_state["summarize_sucess"]==True:
     try:
         os.remove(st.session_state["summarized_file_name"])
         os.remove(st.session_state["original_transcrpt_name"])
-        # 删除path目录下所有文件
+
         for file in os.listdir(path):
             os.remove(os.path.join(path, file))
     except:
