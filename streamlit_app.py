@@ -33,6 +33,7 @@ HERE = Path(__file__).parent
 logger = logging.getLogger(__name__)
 
 st.title("Teams Meetings Summarize / Taskify")
+st.write("Dev: Rajesh Narayanan")
 st.write("Summarize.vtt/.srts files from your meeting transcripts")
 transcript_name=st.file_uploader("Upload your .vtt or .srt files",type=['vtt','srt'])
 col1,col2=st.columns(2)
@@ -119,6 +120,8 @@ if st.session_state["summarize_sucess"]==True:
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
     st.markdown(st.session_state["summary"])
     st.write(st.session_state["summary"])
+    st.title(st.session_state["summary"])
+    st.text(st.session_state["summary"])
     st.text_area(label ="",value=st.session_state["summary"], height =100)
     download_button=st.download_button(
         label="Download",
