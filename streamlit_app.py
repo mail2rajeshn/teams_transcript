@@ -128,12 +128,12 @@ if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is
 ### AUDIO ###
 #################
 
-st.sidebar.text('')
-st.sidebar.text('')
-st.sidebar.text('')
-### SEASON RANGE ###
-st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
-#st.sidebar.multiselect("Select and deselect the teams you would like to include in the analysis. You can clear the current selection by clicking the corresponding x-button on the right", unique_teams, default = unique_teams)
+# st.sidebar.text('')
+# st.sidebar.text('')
+# st.sidebar.text('')
+# ### SEASON RANGE ###
+# st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
+# #st.sidebar.multiselect("Select and deselect the teams you would like to include in the analysis. You can clear the current selection by clicking the corresponding x-button on the right", unique_teams, default = unique_teams)
       
     
     
@@ -239,7 +239,7 @@ def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam
         return
 
     status_indicator.write("Loading...")
-    text_output = st.empty()
+    text_output = st.sidebar.empty()
     stream = None
 
     while True:
@@ -321,13 +321,13 @@ def app_sst_with_video(
         media_stream_constraints={"video": True, "audio": True},
     )
 
-    status_indicator = st.empty()
+    status_indicator = st.sidebar.empty()
 
     if not webrtc_ctx.state.playing:
         return
 
     status_indicator.write("Loading...")
-    text_output = st.empty()
+    text_output = st.sidebar.empty()
     stream = None
 
     while True:
