@@ -188,15 +188,12 @@ def main():
     st.sidebar.text('')
     st.sidebar.text('')
     ### SEASON RANGE ###
-    st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
+    #st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
     st.sidebar.header("Real Time Speech-to-Text")
     st.sidebar.markdown(
         """
-This demo app is using [DeepSpeech](https://github.com/mozilla/DeepSpeech),
-an open speech-to-text engine.
-A pre-trained model released with
-[v0.9.3](https://github.com/mozilla/DeepSpeech/releases/tag/v0.9.3),
-trained on American English is being served.
+ Internallyusing [DeepSpeech](https://github.com/mozilla/DeepSpeech), an open speech-to-text engine.
+Using a pre-trained model [v0.9.3](https://github.com/mozilla/DeepSpeech/releases/tag/v0.9.3) trained on American English.
 """
     )
 
@@ -215,7 +212,7 @@ trained on American English is being served.
 
     sound_only_page = "Sound only (sendonly)"
     with_video_page = "With video (sendrecv)"
-    app_mode = st.selectbox("Choose the app mode", [sound_only_page, with_video_page])
+    app_mode = st.sidebar.selectbox("Choose the app mode", [sound_only_page, with_video_page])
 
     if app_mode == sound_only_page:
         app_sst(
@@ -236,7 +233,7 @@ def app_sst(model_path: str, lm_path: str, lm_alpha: float, lm_beta: float, beam
         media_stream_constraints={"video": False, "audio": True},
     )
 
-    status_indicator = st.empty()
+    status_indicator = st.sidebar.empty()
 
     if not webrtc_ctx.state.playing:
         return
