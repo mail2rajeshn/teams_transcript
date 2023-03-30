@@ -117,6 +117,8 @@ if st.session_state["summarize_sucess"]==True:
 
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
     col2.write("---------------")
+    col2.markdown("**:yellow[MEETING SUMMARY AND TAKEAWAYS]**")
+    col2.write("---------------")
     col2.markdown(st.session_state["summary"].decode("utf-8"))
     col2.write("---------------")
     #st.write(st.session_state["summary"].decode("utf-8"))
