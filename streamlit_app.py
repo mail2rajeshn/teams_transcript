@@ -31,10 +31,6 @@ HERE = Path(__file__).parent
 logger = logging.getLogger(__name__)
 c = st.container()
 
-st.markdown('Streamlit is **_really_ cool**.',unsafe_allow_html=True)
-st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.", unsafe_allow_html=False)
-st.markdown(":green[$\sqrt{x^2+y^2}=1$] is a Pythagorean identity. :pencil:")
-
 st.title("Teams Meetings Summarizer")
 st.write("Dev: Rajesh Narayanan")
 st.write("")
@@ -122,7 +118,7 @@ if st.session_state["summarize_sucess"]==True:
 
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
     col2.write("---------------")
-    col2.markdown("**:yellow[MEETING SUMMARY AND TAKEAWAYS]**")
+    col2.markdown("MEETING SUMMARY AND TAKEAWAYS")
     col2.write("---------------")
     col2.markdown(st.session_state["summary"].decode("utf-8"))
     col2.write("---------------")
