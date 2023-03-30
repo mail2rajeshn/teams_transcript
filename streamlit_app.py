@@ -39,15 +39,15 @@ openai_key=col1.text_input("OpenAI API Key",type="password")
 
 text_engine_options = ["gpt-3.5-turbo","text-davinci-003"]
 default_text_engine_option = "gpt-3.5-turbo"
-text_engine_select=col2.selectbox("Text Engine",options=text_engine_options, index=text_engine_options.index(default_text_engine_option), help='Select the Open AI text engine for the summary')
+text_engine_select=col1.selectbox("Text Engine",options=text_engine_options, index=text_engine_options.index(default_text_engine_option), help='Select the Open AI text engine for the summary')
 
 languages_options = sorted(LANGUAGES.values())
 default_lang_option = "english"
 lang_select = col1.selectbox("Language",options=languages_options,index=languages_options.index(default_lang_option), help='Select the target language for the summary')
 
-test=col2.checkbox("Test",value=True,help='Select this option to only summarize 4 contents you can easily check')
+test=col1.checkbox("Test",value=True,help='Select this option to only summarize 4 contents you can easily check')
 
-make_button=st.button("Make Transcript Summary")
+make_button=col2.button("Make Transcript Summary")
 
 st.session_state["summary"]=None
 
