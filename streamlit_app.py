@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 c = st.container()
 
 
-st.markdown('Streamlit **:blue[colored]** is **_really_ cool**.')
+st.markdown('Streamlit **:blue[colored]** is **_really_ cool**.'.decode("utf-8"))
 st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
 st.markdown(":green[$\sqrt{x^2+y^2}=1$] is a Pythagorean identity. :pencil:")
 
@@ -124,7 +124,7 @@ if st.session_state["summarize_sucess"]==True:
 
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
     col2.write("---------------")
-    col2.markdown("MEETING SUMMARY AND TAKEAWAYS")
+    col2.write("SUMMARY AND TAKEAWAYS")
     col2.write("---------------")
     col2.markdown(st.session_state["summary"].decode("utf-8"))
     col2.write("---------------")
