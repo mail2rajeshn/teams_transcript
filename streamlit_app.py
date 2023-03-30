@@ -5,13 +5,6 @@ from io import StringIO
 import streamlit as st
 import openai
 
-from meeting_summarizer.fileloader import WebVttLoader, SrtLoader
-from meeting_summarizer.prompter import SummarizerPrompter
-from meeting_summarizer.config import AppConfig
-from meeting_summarizer.summarizer import Summarizer
-from meeting_summarizer.utils import LANGUAGES, TO_LANGUAGE_CODE
-from meeting_summarizer.config import text_engine_choices
-
 import logging
 import logging.handlers
 import queue
@@ -27,6 +20,12 @@ import numpy as np
 import pydub
 import streamlit as st
 
+from meeting_summarizer.fileloader import WebVttLoader, SrtLoader
+from meeting_summarizer.prompter import SummarizerPrompter
+from meeting_summarizer.config import AppConfig
+from meeting_summarizer.summarizer import Summarizer
+from meeting_summarizer.utils import LANGUAGES, TO_LANGUAGE_CODE
+from meeting_summarizer.config import text_engine_choices
 from streamlit_webrtc import WebRtcMode, webrtc_streamer
 
 HERE = Path(__file__).parent
