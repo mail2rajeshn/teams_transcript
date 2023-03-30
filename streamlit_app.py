@@ -104,4 +104,13 @@ if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is
         data=st.session_state["summary"],
         file_name=transcript_name.name.split(".")[0]+".summary.txt",
     ) 
-        
+
+#################
+### SELECTION ###
+#################
+
+st.sidebar.text('')
+st.sidebar.text('')
+st.sidebar.text('')
+### SEASON RANGE ###
+st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
