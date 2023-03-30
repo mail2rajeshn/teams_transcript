@@ -114,3 +114,4 @@ st.sidebar.text('')
 st.sidebar.text('')
 ### SEASON RANGE ###
 st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
+st.button("Make Transcript Summary")
