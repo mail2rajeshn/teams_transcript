@@ -117,7 +117,8 @@ if st.session_state["summarize_sucess"]==True:
         pass 
 
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
-    st.markdown(st.session_state["summary"][0])
+    st.markdown(st.session_state["summary"])
+    st.write(st.session_state["summary"])
     st.text_area(label ="",value=st.session_state["summary"], height =100)
     download_button=st.download_button(
         label="Download",
