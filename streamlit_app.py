@@ -30,12 +30,15 @@ HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
 
-st.header('A header with _italics_ :blue[colors] and emojis :sunglasses:')
 
 
+code = '''def hello():
+    print("Hello, Streamlit!")'''
+st.code(code, language='python')
+st.code(code, language='html')
 
-st.title("Teams Meetings Summarizer")
-st.write("Dev: Rajesh Narayanan")
+st.header('Teams Meetings Summarizer')
+st.write("Developer: Rajesh Narayanan (mail2rajeshn@gmail.com)")
 st.write("")
 transcript_name=st.file_uploader("Upload Microsoft Team meeting .vtt/.srt's files from your meeting transcripts",type=['vtt','srt'])
 col1,col2=st.columns(2)
