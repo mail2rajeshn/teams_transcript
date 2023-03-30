@@ -120,10 +120,10 @@ if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is
     col2.write("---------------")
     col2.write("SUMMARY AND TAKEAWAYS")
     col2.write("---------------")
-    code = '''def hello():
-    print("Hello, Streamlit!")'''
-    col2.code(st.session_state["summary"].decode("utf-8"), language='python')
-    col2.code(st.session_state["summary"].decode("utf-8"), language='html')
+    #code = '''def hello():
+    #print("Hello, Streamlit!")'''
+    #col2.code(st.session_state["summary"].decode("utf-8"), language='python')
+    #col2.code(st.session_state["summary"].decode("utf-8"), language='html')
     col2.markdown(st.session_state["summary"].decode("utf-8"))
     col2.write("---------------")
     #st.write(st.session_state["summary"].decode("utf-8"))
