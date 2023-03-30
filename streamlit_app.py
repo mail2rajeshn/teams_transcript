@@ -184,8 +184,13 @@ def download_file(url, download_to: Path, expected_size=None):
 
 
 def main():
-    st.header("Real Time Speech-to-Text")
-    st.markdown(
+    st.sidebar.text('')
+    st.sidebar.text('')
+    st.sidebar.text('')
+    ### SEASON RANGE ###
+    st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
+    st.sidebar.header("Real Time Speech-to-Text")
+    st.sidebar.markdown(
         """
 This demo app is using [DeepSpeech](https://github.com/mozilla/DeepSpeech),
 an open speech-to-text engine.
