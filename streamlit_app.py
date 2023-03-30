@@ -31,6 +31,7 @@ from streamlit_webrtc import WebRtcMode, webrtc_streamer
 HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
+st.expander()
 st.title("Teams Meetings Summarizer")
 st.write("Dev: Rajesh Narayanan")
 st.write("Summarize.vtt/.srts files from your meeting transcripts")
