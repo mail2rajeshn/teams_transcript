@@ -34,7 +34,7 @@ st.title("Teams Meetings Summarizer")
 st.write("Dev: Rajesh Narayanan")
 st.write("Summarize.vtt/.srts files from your meeting transcripts")
 transcript_name=st.file_uploader("Upload your .vtt or .srt files",type=['vtt','srt'])
-col1,col2=st.columns([2,6])
+col1,col2=st.columns(2])
 openai_key=col1.text_input("OpenAI API Key",type="password")
 
 text_engine_options = ["gpt-3.5-turbo","text-davinci-003"]
