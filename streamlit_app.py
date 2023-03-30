@@ -32,8 +32,8 @@ logger = logging.getLogger(__name__)
 c = st.container()
 st.title("Teams Meetings Summarizer")
 st.write("Dev: Rajesh Narayanan")
-st.write("Summarize.vtt/.srts files from your meeting transcripts")
-transcript_name=st.file_uploader("Upload your .vtt or .srt files",type=['vtt','srt'])
+st.write("")
+transcript_name=st.file_uploader("Upload Microsoft Team meeting .vtt/.srt's files from your meeting transcripts",type=['vtt','srt'])
 col1,col2=st.columns(2)
 openai_key=col1.text_input("OpenAI API Key",type="password")
 
@@ -47,7 +47,7 @@ lang_select = col1.selectbox("Language",options=languages_options,index=language
 
 test=col1.checkbox("Test",value=True,help='Select this option to only summarize 4 contents you can easily check')
 
-make_button=col2.button("Make Transcript Summary")
+make_button=col1.button("Make Transcript Summary")
 
 st.session_state["summary"]=None
 
@@ -116,9 +116,9 @@ if st.session_state["summarize_sucess"]==True:
         pass 
 
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
-    st.write("---------------")
-    st.markdown(st.session_state["summary"].decode("utf-8"))
-    st.write("---------------")
+    col2.write("---------------")
+    col2.markdown(st.session_state["summary"].decode("utf-8"))
+    col2.write("---------------")
     #st.write(st.session_state["summary"].decode("utf-8"))
     #st.title(st.session_state["summary"].decode("utf-8"))
     #st.text(st.session_state["summary"].decode("utf-8"))
