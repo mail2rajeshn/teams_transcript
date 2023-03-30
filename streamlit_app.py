@@ -14,11 +14,9 @@ import urllib.request
 from collections import deque
 from pathlib import Path
 from typing import List
-
 import av
 import numpy as np
 import pydub
-import streamlit as st
 
 from meeting_summarizer.fileloader import WebVttLoader, SrtLoader
 from meeting_summarizer.prompter import SummarizerPrompter
@@ -31,7 +29,7 @@ from streamlit_webrtc import WebRtcMode, webrtc_streamer
 HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
-st.expander()
+c = st.container()
 st.title("Teams Meetings Summarizer")
 st.write("Dev: Rajesh Narayanan")
 st.write("Summarize.vtt/.srts files from your meeting transcripts")
