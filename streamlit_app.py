@@ -133,7 +133,7 @@ st.sidebar.text('')
 st.sidebar.text('')
 ### SEASON RANGE ###
 st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
-st.sidebar.multiselect("Select and deselect the teams you would like to include in the analysis. You can clear the current selection by clicking the corresponding x-button on the right", unique_teams, default = unique_teams)
+#st.sidebar.multiselect("Select and deselect the teams you would like to include in the analysis. You can clear the current selection by clicking the corresponding x-button on the right", unique_teams, default = unique_teams)
       
     
     
