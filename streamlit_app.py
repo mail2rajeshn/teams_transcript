@@ -114,4 +114,7 @@ st.sidebar.text('')
 st.sidebar.text('')
 ### SEASON RANGE ###
 st.sidebar.markdown("**First select the data range you want to analyze:** 👇")
-st.button("Make Transcript Summary")
+### MATCHDAY RANGE ###
+unique_matchdays = get_unique_matchdays(df_data_filtered_season) #min and max matchday
+selected_matchdays = st.sidebar.select_slider('Select the matchday range you want to include', unique_matchdays, value=[min(unique_matchdays),max(unique_matchdays)])
+df_data_filtered_matchday = filter_matchday(df_data_filtered_season)      
