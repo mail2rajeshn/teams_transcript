@@ -119,9 +119,9 @@ if st.session_state["summarize_sucess"]==True:
 if st.session_state["summarize_sucess"]==True and st.session_state["summary"] is not None:
     st.markdown(st.session_state["summary"].decode("utf-8"))
     st.write(st.session_state["summary"].decode("utf-8"))
-    st.title(st.session_state["summary"].decode("utf-8"))
-    st.text(st.session_state["summary"].decode("utf-8"))
-    st.text_area(label ="",value=st.session_state["summary"], height =100)
+    #st.title(st.session_state["summary"].decode("utf-8"))
+    #st.text(st.session_state["summary"].decode("utf-8"))
+    #st.text_area(label ="",value=st.session_state["summary"], height =100)
     download_button=st.download_button(
         label="Download",
         data=st.session_state["summary"],
