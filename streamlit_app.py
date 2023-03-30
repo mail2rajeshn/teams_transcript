@@ -29,13 +29,9 @@ from streamlit_webrtc import WebRtcMode, webrtc_streamer
 HERE = Path(__file__).parent
 
 logger = logging.getLogger(__name__)
-cc = 'Streamlit **:blue[colored]** is **_really_ cool**.'
 
-
-st.markdown(cc.decode("utf-8"))
 st.header('A header with _italics_ :blue[colors] and emojis :sunglasses:')
-st.markdown("This text is :red[colored red], and this is **:blue[colored]** and bold.")
-st.markdown(":green[$\sqrt{x^2+y^2}=1$] is a Pythagorean identity. :pencil:")
+
 
 
 st.title("Teams Meetings Summarizer")
